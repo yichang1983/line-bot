@@ -39,10 +39,14 @@ def callback():
 def handle_message(event):
     msg = event.message.text
     r = '我看不懂你說什麼？'
-    if msg == 'hi':
+    if msg == ['hi', 'Hi']:
         r = 'hi'
-    elif msg == '你吃飯了嗎':
-        r = '還沒'
+    elif msg == 'Have you eaten':
+        r = 'Not yet'
+    elif msg == 'Who are you?':
+        r = 'I am a Robot'
+    elif 'booking' in msg:
+        r = 'Do you want to book a table?'
 
 
 
